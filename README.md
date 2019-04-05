@@ -11,7 +11,7 @@ jupyter kernelspec list
 ```
 to see which kernel is available right now. Sometimes the default kernel is not the python interpretor in the new env. A simple way to check is that:
 in termial, you may run 
-```python
+```bash
 which python
 python --version
 ```
