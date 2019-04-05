@@ -1,4 +1,4 @@
-# Python_Problems
+# Python Tips
 
 
 ## 1. how to create and remove virtual environment in anaconda?
