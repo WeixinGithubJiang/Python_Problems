@@ -85,8 +85,9 @@ print(sys.executable)
 jupyter kernelspec list
 ```
 
-> 2. check if ipykernel package has been installed
+> 2. activate the environment and check if ipykernel package has been installed
 ```bash
+conda activate env_name
 conda list
 ```
 > if not, install it
