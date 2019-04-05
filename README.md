@@ -104,3 +104,10 @@ python -m ipykernel install --user --name new_env_name --display-name "Python3 (
 jupyter kernelspec remove ipykernel_name
 ```
 
+## 4. how to change python version with conda?
+```bash
+conda search python
+```
+```bash
+conda install python=3.6.8(version_num)
+```
