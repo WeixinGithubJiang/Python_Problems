@@ -1,5 +1,29 @@
 # Python_Problems
 
+
+## 1. how to create and remove virtual environment in anaconda?
+Virtual environment is quite important when using python, because it kind of provides a independent environment from the original system. The benefits is that we may install libraries/packages whatever we want, and it will not influence other environments.
+
+> Create a new Virtual Environment
+```bash
+conda create -n env_name python=3
+```
+
+> Check the list of all existing environments
+```bash
+conda env list
+```
+
+> Check the configuration of conda
+```bash
+conda info
+```
+
+> Remove an existing environment
+```bash
+conda env remove --name env_name
+```
+
 ## 1. how to choose the ipython kernel for jupyter notebook?
 It is a good habit to create a virtual env with anaconda when running some python code. The code can be 
 ```bash
