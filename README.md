@@ -62,22 +62,14 @@ ssh -p port_num -N -f -L localhost:local_port:localhost:server_port id@domain
 localhost:local_port
 ``` 
 
-## 1. how to choose the ipython kernel for jupyter notebook?
-It is a good habit to create a virtual env with anaconda when running some python code. The code can be 
-```bash
-conda create -n env_name python=3
-```
-when you activate the new env you create, you may use 
-```bash
-jupyter kernelspec list
-```
-to see which kernel is available right now. Sometimes the default kernel is not the python interpretor in the new env. A simple way to check is that:
-in termial, you may run 
+## 3. how to check python version and path?
+> in terminal
 ```bash
 which python
 python --version
 ```
-which returns the path of the python interpretor and the python version. In notebook, run
+
+> in notebook/script
 ```python
 from platform import python_version
 print(python_version())
@@ -86,17 +78,29 @@ print(python_version())
 import sys
 print(sys.executable)
 ```
-which return similar things. It might be that you find the info you get from these two ways are different, which means notebook does not use the kernel of the new env. Easy way to fix it is:
-First run 
+
+## 4. how to create or remove ipython kernel for jupyter notebook?
+> 1. check existing ipython kernel
+```bash
+jupyter kernelspec list
+```
+
+> 2. check if ipykernel package has been installed
 ```bash
 conda list
 ```
-see if ipykernel is already installed in the new env, if not, run
+> if not, install it
 ```bash
 python -m pip install ipykernel
 ```
-to install it. Then run 
+
+> 3. create a new kernel with an existing env
 ```bash
 python -m ipykernel install --user --name new_env_name --display-name "Python3 (new_env_name)"
 ```
-After running this, when you want to create a new notebook from the browser, you will see there is an option shows "Python3 (new_env_name)".
+
+> 4. remove an existing kernel
+```bash
+jupyter kernelspec remove ipykernel_name
+```
+
