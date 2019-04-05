@@ -24,6 +24,44 @@ conda info
 conda env remove --name env_name
 ```
 
+> Clone an existing environment
+```bash
+conda create --name clone_env_name --clone existing_env_name
+```
+
+> Export an existing environment
+```bash
+conda activate existing_env_name
+conda env export > save_file_name.yml
+```
+
+> Recover environment from .yml file
+```bash
+conda env create -f environment_file_name.yml
+``` 
+
+## 2. how to set up a jupyter notebook server and remote access it from terminal?
+### Prerequisite: anaconda installed on server/ internet access on server/ port connection(?)
+> 1. login into server using ssh (local end)
+```bash
+ssh id@domain -p port_num
+``` 
+
+> 2. run jupyter notebook server (server end)
+```bash
+jupyter notebook --no-browser --port=port_num --NotebookApp.password=""
+``` 
+
+> 3. build port connection (local end)
+```bash
+ssh -p port_num -N -f -L localhost:local_port:localhost:server_port id@domain
+``` 
+
+> 4. open notebook in browser (local end)
+```http
+localhost:local_port
+``` 
+
 ## 1. how to choose the ipython kernel for jupyter notebook?
 It is a good habit to create a virtual env with anaconda when running some python code. The code can be 
 ```bash
