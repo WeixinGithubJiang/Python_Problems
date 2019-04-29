@@ -125,3 +125,19 @@ def viz(t):
 
 interactive_plot = interact(viz,t=(min,max))
 ```
+
+## 6. how to load/save data from/to a file?
+
+> 1. save/load dictionary
+
+>> 1.1 use yaml
+
+```python
+import yaml
+
+with open(filename,'r') as f:
+  data = yaml.load(f)
+  
+with open(filename,'w') as f:
+  yaml.dump(data,f,default_flow_style=False)
+```
