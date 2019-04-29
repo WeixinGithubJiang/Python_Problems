@@ -112,3 +112,16 @@ conda search python
 ```bash
 conda install python=3.6.8(version_num)
 ```
+
+## 5. how to interactively show a sequence of images?
+```python
+from ipywidgets import interact
+import matplotlib.pyplot as plt
+
+def viz(t):
+  h = plt.imshow(example[:,:,t])
+  plt.colorbar(h)
+  plt.show()
+
+interactive_plot = interact(viz,t=(min,max))
+```
