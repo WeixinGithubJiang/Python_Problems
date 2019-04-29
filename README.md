@@ -130,7 +130,7 @@ interactive_plot = interact(viz,t=(min,max))
 
 > 1. save/load dictionary
 
->> 1.1 use yaml
+>> yaml
 
 ```python
 import yaml
