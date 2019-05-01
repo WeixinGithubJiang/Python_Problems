@@ -150,3 +150,17 @@ import matplotlib.pylab as pylab
 
 pylab.rcParams['figure.figsize'] = width, height # set the size of the figure
 ```
+
+## 8. how to load image?
+
+>1. with opencv
+```python
+import cv2
+image = cv2.imread(filename,1) # 1 means color image with channel order BGR
+```
+
+>2. with PIL
+```python
+from PIL import Image
+image = Image.open(filename).convert("RGB") # color image with channel order RGB
+```
