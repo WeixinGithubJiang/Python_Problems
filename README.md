@@ -165,3 +165,10 @@ from PIL import Image
 image = Image.open(filename).convert("RGB") # color image with channel order RGB
 image.save(filename)
 ```
+
+## 9. how to manipulate the attributes in a class?
+
+>1. class to dict
+```python
+dict = vars(class_name)
+```
