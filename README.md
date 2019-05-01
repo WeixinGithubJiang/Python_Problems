@@ -141,3 +141,12 @@ with open(filename,'r') as f:
 with open(filename,'w') as f:
   yaml.dump(data,f,default_flow_style=False)
 ```
+
+## 7. how to plot?
+
+>1. plot with pylab
+```python
+import matplotlib.pylab as pylab
+
+pylab.rcParams['figure.figsize'] = width, height # set the size of the figure
+```
