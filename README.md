@@ -172,3 +172,20 @@ image.save(filename)
 ```python
 dict = vars(class_name)
 ```
+
+## 10. python class
+
+```python
+class ExampleClass():
+  def __init__(self,**kwargs):
+    pass
+    
+  def __getitem__(self, idx):
+    return xxx
+    
+  def __len__(self):
+    return int_value
+    
+  def __call__(self, **kwargs):
+    return xxx
+```
