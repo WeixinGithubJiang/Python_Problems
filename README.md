@@ -193,10 +193,7 @@ class ExampleClass():
 ## 11. python tricks
 >1. run python in the background
 ```bash
-python script.py
-ctrl+Z
-bg
-disown %job_id(use jobs to get the job id)
+nohup bash script.sh &
 ```
 
 >2. run jupyter notebook in the background
