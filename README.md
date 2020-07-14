@@ -200,3 +200,24 @@ nohup bash script.sh &
 ```bash
 jupyter notebook &
 ```
+
+## 11. import self-developed module
+
+>1. create a blank __init__.py in the folder
+
+>2. when importing, use "." to represent current folder, use ".." to represent parent folder, use "."xN to represent (N-1) parent folder.
+
+>3. most important, you can never go to the folder that is the parent folder of the main.py
+```python
+--base
+----folder_1
+------main.py
+------folder_1_1
+--------__init__.py
+--------func_1_1.py
+----folder_2
+------__init__.py
+------func_2.py
+----__init__.py
+```
+suppose we are trying to import module from func_1_1.py in the main.py, it would fail if func_1_1.py tries to import module from func_2.py, because the root folder is folder_1, folder_2 is outside of folder_1. If we move main.py to the folder of base, than it works.
